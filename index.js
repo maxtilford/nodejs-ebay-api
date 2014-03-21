@@ -158,13 +158,10 @@ var buildXmlInput = function buildXmlInput(opType, params) {
   // for repeatable fields, use array values.
   // to keep this simpler, treat everything as an array value.
   _(params).each(function(values, key) {
+    var obj = {};
     if (!_.isArray(values)) values = [values];
-
-    _(values).each(function(value){
-      var el = {};
-      el[key] = value;
-      top.push(el);
-    });
+    obj[key] = values;
+    top.push(obj);
   });
 
   // console.log(util.inspect(data,true,10));
