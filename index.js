@@ -167,7 +167,7 @@ var buildXmlInput = function buildXmlInput(opType, params) {
   // console.log(util.inspect(data,true,10));
   data = [ data ];
 
-  return '<?xml version="1.0" encoding="UTF-8"?>' + "\n" + xmlBuilder(data, true);
+  return '<?xml version="1.0" encoding="UTF-8"?>' + "\n" + xmlBuilder(data);
 };
 
 
